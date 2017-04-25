@@ -1,6 +1,10 @@
-package: github.com/tracerun/client-go
+package: github.com/tracerun/trclient
 import: 
 - package: github.com/drkaka/lg
+- package: github.com/tracerun/tracerun
+  version: develop
+  subpackages:
+  - service
 testImport:
 - package: github.com/stretchr/testify
   subpackages:

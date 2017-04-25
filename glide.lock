@@ -1,8 +1,48 @@
-hash: 3f6860c112cf7a051f07dd99bcbf4d28722f421b0e24a0965999a3875b6fe9e9
-updated: 2017-04-24T16:53:33.3063575+08:00
+hash: 31405cec2d9b60efd1772c3e78003aed8f9fbe341f31a4a393b8bfbbe7e79174
+updated: 2017-04-25T17:31:20.6710009+08:00
 imports:
 - name: github.com/drkaka/lg
   version: 699b294366df5a3f4ed00c92ed3200acde983a50
+- name: github.com/drkaka/ulid
+  version: a4078d88d430f7f5c443e60820664d0eef7a1cc8
+- name: github.com/gogo/protobuf
+  version: 7efa791bd276fd4db00867cbd982b552627c24cb
+  subpackages:
+  - proto
+- name: github.com/golang/protobuf
+  version: c9c7427a2a70d2eb3bafa0ab2dc163e45f143317
+  subpackages:
+  - proto
+- name: github.com/satori/go.uuid
+  version: 879c5887cd475cd7864858769793b2ceb0d44feb
+- name: github.com/tracerun/locker
+  version: 3d6a08b077973af7fcd359a42568e518fc429dae
+- name: github.com/tracerun/tdb
+  version: 6aa485dc1c7b70f0f50193297390b900e260b34f
+- name: github.com/tracerun/tracerun
+  version: 69cfd8bcba9de65f68b7dd22bc8be428677b5c63
+  subpackages:
+  - lg
+  - service
+- name: go.uber.org/atomic
+  version: 4e336646b2ef9fc6e47be8e21594178f98e5ebcf
+- name: go.uber.org/zap
+  version: 1550bc05539134bbf8612a35f34a79ab8bf34ee3
+  subpackages:
+  - buffer
+  - internal/bufferpool
+  - internal/color
+  - internal/exit
+  - internal/multierror
+  - zapcore
+- name: golang.org/x/net
+  version: a6577fac2d73be281a500b310739095313165611
+  subpackages:
+  - context
+- name: golang.org/x/sync
+  version: de49d9dcd27d4f764488181bea099dfe6179bcf0
+  subpackages:
+  - errgroup
 testImports:
 - name: github.com/davecgh/go-spew
   version: 04cdfd42973bb9c8589fd6a731800cf222fde1a9
@@ -16,3 +56,5 @@ testImports:
   version: 4d4bfba8f1d1027c4fdbe371823030df51419987
   subpackages:
   - assert
+  - require
+  - suite
