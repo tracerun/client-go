@@ -39,7 +39,7 @@ func (suite *SendClientTestSuite) TestSendAction() {
 	suite.NoError(err, "error create new client")
 	suite.True(avaiable, "server should be available")
 
-	err = cli.SendAction("abc", true)
+	err = cli.SendAction("abc")
 	suite.NoError(err, "send action error")
 
 	err = cli.conn.Close()
@@ -57,6 +57,6 @@ func BenchmarkSendActions(b *testing.B) {
 	}
 
 	for i := 0; i < b.N; i++ {
-		cli.SendAction("abc", true)
+		cli.SendAction("abc")
 	}
 }

@@ -1,12 +1,12 @@
 hash: 31405cec2d9b60efd1772c3e78003aed8f9fbe341f31a4a393b8bfbbe7e79174
-updated: 2017-04-25T17:31:20.6710009+08:00
+updated: 2017-04-27T14:50:18.7998527+08:00
 imports:
 - name: github.com/drkaka/lg
   version: 699b294366df5a3f4ed00c92ed3200acde983a50
 - name: github.com/drkaka/ulid
   version: a4078d88d430f7f5c443e60820664d0eef7a1cc8
 - name: github.com/gogo/protobuf
-  version: 7efa791bd276fd4db00867cbd982b552627c24cb
+  version: 30433562cfbf487fe1df7cd26c7bab168d2f14d0
   subpackages:
   - proto
 - name: github.com/golang/protobuf
@@ -18,16 +18,16 @@ imports:
 - name: github.com/tracerun/locker
   version: 3d6a08b077973af7fcd359a42568e518fc429dae
 - name: github.com/tracerun/tdb
-  version: 6aa485dc1c7b70f0f50193297390b900e260b34f
+  version: 3de7fc262707ca41648f7688ebeee257dbd5fd0c
 - name: github.com/tracerun/tracerun
-  version: 69cfd8bcba9de65f68b7dd22bc8be428677b5c63
+  version: 10d222cdb8adcd9ded5def13b2ffd489a896b008
   subpackages:
   - lg
   - service
 - name: go.uber.org/atomic
   version: 4e336646b2ef9fc6e47be8e21594178f98e5ebcf
 - name: go.uber.org/zap
-  version: 1550bc05539134bbf8612a35f34a79ab8bf34ee3
+  version: 6a4e056f2cc954cfec3581729e758909604b3f76
   subpackages:
   - buffer
   - internal/bufferpool

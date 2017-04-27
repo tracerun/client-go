@@ -6,7 +6,6 @@ import (
 	"sync"
 	"time"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/tracerun/tracerun/service"
 )
 
@@ -84,36 +83,32 @@ func (cli *SendClient) Ping() error {
 		return err
 	}
 
-	buf := make([]byte, 3)
-	buf[2] = byte(1)
+	thisRoute := uint8(1)
+	headerBuf := service.GenerateHeaderBuf(uint16(0), thisRoute)
 
 	cli.connLock.Lock()
 	defer cli.connLock.Unlock()
 
-	_, err = cli.conn.Write(buf)
+	_, err = cli.conn.Write(headerBuf)
 	return err
 }
 
 // SendAction to send an action
-func (cli *SendClient) SendAction(target string, active bool) error {
+func (cli *SendClient) SendAction(target string) error {
 	err := cli.getConn()
 	if err != nil {
 		return err
 	}
 
-	buf, err := proto.Marshal(&service.Action{
-		Target: target,
-		Active: active,
-	})
-
-	p(fmt.Sprintf("buffer length: %d", len(buf)))
-	headerBuf := service.GenerateHeaderBuf(uint16(len(buf)), uint8(2))
-	buf = append(headerBuf, buf...)
+	thisRoute := uint8(10)
+	buf := []byte(target)
+	p(fmt.Sprintln("target bytes: ", buf))
+	headerBuf := service.GenerateHeaderBuf(uint16(len(buf)), thisRoute)
 
 	cli.connLock.Lock()
 	defer cli.connLock.Unlock()
 
-	_, err = cli.conn.Write(buf)
+	_, err = cli.conn.Write(append(headerBuf, buf...))
 	return err
 }
 
