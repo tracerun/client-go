@@ -1,5 +1,5 @@
-hash: 31405cec2d9b60efd1772c3e78003aed8f9fbe341f31a4a393b8bfbbe7e79174
-updated: 2017-04-27T14:50:18.7998527+08:00
+hash: ac6a6fb8d2371502e690595428e4ca5e9792c5ffdf41c7fe09add7a8cb5fcf7e
+updated: 2017-04-27T15:33:17.0609918+08:00
 imports:
 - name: github.com/drkaka/lg
   version: 699b294366df5a3f4ed00c92ed3200acde983a50
@@ -20,7 +20,7 @@ imports:
 - name: github.com/tracerun/tdb
   version: 3de7fc262707ca41648f7688ebeee257dbd5fd0c
 - name: github.com/tracerun/tracerun
-  version: 10d222cdb8adcd9ded5def13b2ffd489a896b008
+  version: 3db6b810d2c916813f4622274f9a8dbbfb798885
   subpackages:
   - lg
   - service

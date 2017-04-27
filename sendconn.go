@@ -1,4 +1,4 @@
-package trclient
+package clientgo
 
 import (
 	"fmt"
